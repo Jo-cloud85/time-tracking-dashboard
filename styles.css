@@ -1,0 +1,289 @@
+/* Trying out grid-template in this challenge */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    font-family: "Rubik", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text styles */
+
+.timeframe-title,
+.title {
+    font-size: 18px;
+}
+
+.timeframe-title {
+    color:hsl(236, 100%, 87%);
+    padding-top: 20px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.timeframe-title:is(:hover, :active),
+.title,
+.name,
+.current-hr {
+    color: hsl(0, 0%, 100%);
+}
+
+.name {
+    font-size: 40px;
+    font-weight: 300;
+    padding-top: 3px;
+}
+
+.current-hr {
+    font-size: 55px;
+    font-weight: 300;
+    padding-top: 24px;
+    padding-bottom: 8px;
+}
+
+#report-label,
+.previous-hr {
+    font-size: 15px;
+    color: hsl(236, 100%, 87%);
+}
+
+/* Grid-structure */
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "a b c d"            
+        "a e f g";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 255px 255px 255px 255px;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+#intro {
+    grid-area: a;
+    background-color: hsl(235, 46%, 20%);
+}
+
+#work {
+    grid-area: b;
+    background-color: hsl(15, 100%, 70%);
+}
+
+#play {
+    grid-area: c;
+    background-color: hsl(195, 74%, 62%);
+}
+
+#study {
+    grid-area: d;
+    background-color: hsl(348, 100%, 68%);
+}
+
+#exercise {
+    grid-area: e;
+    background-color: hsl(145, 58%, 55%);
+}
+
+#social {
+    grid-area: f;
+    background-color: hsl(264, 64%, 52%);
+}
+
+#self-care {
+    grid-area: g;
+    background-color: hsl(43, 84%, 65%);
+}
+
+/* Individual boxes */
+
+.intro-box {
+    display: grid;
+    grid-template-rows: 355px 1fr;
+    border-radius: 15px;
+}
+
+.blue-box {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    padding: 34px;
+}
+
+.main-dark-blue-box {
+    height: auto;
+    width: auto;
+    padding: 5px 30px 30px 30px;
+}
+
+.sub-box {
+    display: grid;
+    grid-template-rows: 45px 1fr;
+    border-radius: 20px;
+}
+
+.dark-blue-box {
+    height: auto;
+    width: auto;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    padding: 30px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.dark-blue-box:hover {
+    background-color: hsl(238, 36%, 33%);
+}
+
+.label-title {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Images & icons */
+
+#profile-pic {
+    display: block;
+    width: 78px;
+    border-radius: 45px; /* Give more room for round radius. */
+    border: 3px solid hsl(0, 0%, 100%);
+    margin-bottom: 40px;
+}
+
+.icons {
+    width: 30%;
+    height: 45px; /* Match grid-template-rows */
+    margin-left: 160px; /* You can also use div and alignment to position icon to the right.*/
+    object-fit: cover;
+}
+
+#work-icon,
+#study-icon,
+#social-icon,
+#self-care-icon {
+    object-position: 50% 35%; /* Represent x & y respectively*/
+}
+
+#play-icon,
+#exercise-icon {
+    object-position: 50% 20%; /* Represent x & y respectively*/
+}
+
+.icon-ellipsis {
+    width: 20px;
+    cursor: pointer;
+    transition: filter 0.15s;
+}
+
+.icon-ellipsis:is(:hover, :focus) {
+    filter: grayscale(100%) brightness(200%);
+}
+
+/* Footer */
+
+.attribution { 
+    position: relative;
+    font-size: 11px; 
+    text-align: center; 
+    color: hsl(0, 0%, 100%); 
+}
+
+.attribution a { 
+    color: hsl(0, 0%, 100%); 
+}
+
+@media (max-width: 1024px) { 
+    body {
+        height: auto;
+    }
+    
+    main {
+        width: 85%;
+    }
+
+    /* Text styles */
+
+    .name {
+        font-size: 25px;
+    }
+
+    /* Grid structure */
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 80px 0;
+    }
+
+    /* Individual boxes */
+    
+    .intro-box,
+    .sub-box {
+        width: 100%;
+    }
+
+    .intro-box {
+        display: grid;
+        grid-template-rows: 132px 1fr;
+        border-radius: 15px;
+    }
+
+    .blue-box {
+        display: flex;
+        align-items: center; /* This line prevents stretching*/
+        padding: 25px;
+    }
+
+    .main-dark-blue-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 25px 25px 25px;
+    }
+
+    .sub-box {
+        grid-template-rows: 40px 1fr;
+    }
+
+    .label-time {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .current-hr {
+        font-size: 32px;
+        font-weight: 300;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .dark-blue-box {
+        padding: 25px;
+    }
+
+    /* Images & icons */
+
+    #profile-pic {
+        width: 70px;
+        border-radius: 45px; /* Give more room for round radius. */
+        border: 3px solid hsl(0, 0%, 100%);
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+}

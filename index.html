@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="overall">
+
+    <div class="grid-container">
+
+      <div class="intro-box" id="intro">
+        <div class="blue-box">
+          <img id="profile-pic" src="images/image-jeremy.png" alt="profile-pic">
+          <div id="profile">
+            <label id="report-label">Report for</label>
+            <p class="name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="main-dark-blue-box">
+          <p class="timeframe-title" id="Daily" onclick="data('Daily')">Daily</p>
+          <p class="timeframe-title" id="Weekly" onclick="data('Weekly')">Weekly</p>
+          <p class="timeframe-title" id="Monthly" onclick="data('Monthly')">Monthly</p>
+        </div>
+      </div>
+
+      <div class="sub-box" id="work"></div>
+      <div class="sub-box" id="play"></div>
+      <div class="sub-box" id="study"></div>
+      <div class="sub-box" id="exercise"></div>
+      <div class="sub-box" id="social"></div>
+      <div class="sub-box" id="self-care"></div>
+
+    </div>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Jo Young</a>.
+    </footer>
+
+  </main>
+  <script src="data.js"></script>
+</body>
+
+</html>
