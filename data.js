@@ -24,7 +24,7 @@ async function data(time) {
         // this is the div to contain the respective icons
         const imgIcon = document.createElement("img");
         imgIcon.classList.add("icons");
-        imgIcon.setAttribute("id","lowercaseName.replace(/\s/g, '')");
+        imgIcon.setAttribute("id",`icon-${lowercaseName.replace(/\s/g, '')}`);
         imgIcon.src = `images/icon-${lowercaseName.replace(/\s+/g, '-')}.svg`
         imgIcon.alt = `icon-${lowercaseName.replace(/\s+/g, '-')}`;
 
