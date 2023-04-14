@@ -10,6 +10,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
 ## Overview
 
@@ -23,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/Jo-cloud85/time-tracking-dashboard.git
+- Live Site URL: https://jo-cloud85.github.io/time-tracking-dashboard/
 
 ## My process
 
@@ -34,7 +35,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
+- Desktop-first workflow
 - [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
@@ -61,3 +62,9 @@ Of course, the current HTML code, coupled with JS file can be made more succint 
 On CSS -
 
 This is my first time learning about grid-template-areas. So I thought I will use this challenge to give it a try. It is not the shortest way of creating the grid format expected but nonetheless, it was good to learn something new.
+
+### Continued development
+
+I hope to come back one day to submit another solution using more efficient Javascript that runs on the backend instead of frontend like this one, or to use React, and using Tailwind CSS instead of plain CSS grid etc. 
+
+Also, if possible, I love to add new features like toggling between night and day mode, as well as to use the icon-ellipsis as a dropdown menu button to reset data.
